@@ -1,5 +1,5 @@
 # API配置（使用阿里云百炼）
-OPENAI_API_KEY = "sk-9063f1a5880f43ebb550d9f60de7e91e"  # 从阿里云百炼获取
+OPENAI_API_KEY = "sk-你的API密钥"  # 从阿里云百炼获取
 OPENAI_API_BASE = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 MODEL_NAME = "qwen-max"  # 或 "qwen-plus"
 OPENAI_EMBEDDING_MODEL = "text-embedding-v2"
