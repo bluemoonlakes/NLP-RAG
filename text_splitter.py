@@ -14,7 +14,7 @@ class TextSplitter:
 
         # 计算最大允许的字符数（根据token限制估算）
         # 对于中文，保守估计：1个token ≈ 3个字符
-        max_chars_per_chunk = min(self.chunk_size, 3000)  # 不超过3000字符
+        max_chars_per_chunk = self.chunk_size #默认为500
         
         # 如果文本很短，直接返回
         if len(text) <= max_chars_per_chunk:

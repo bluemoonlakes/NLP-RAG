@@ -48,10 +48,11 @@ class VectorStore:
             # 检查并截断文本长度
             # 对于中文，粗略估计token数量：1个token ≈ 2-3个中文字符
             # 2048个token ≈ 4000-6000个中文字符
-            max_char_length = 4000  # 安全字符数
+            max_char_length = 2000  # 安全字符数
             
             if len(text) > max_char_length:
                 print(f"警告：文本长度 {len(text)} 超过限制，截断至 {max_char_length}")
+                print(text)
                 text = text[:max_char_length]
             
             response = self.client.embeddings.create(
@@ -83,11 +84,6 @@ class VectorStore:
                 
                 # 获取文本内容
                 content = chunk.get("content", "")
-                
-                # 检查文本长度，如果过长则截断
-                if len(content) > 4000:
-                    print(f"警告：文档块过长，进行截断: {chunk['filename']}, 长度: {len(content)}")
-                    content = content[:4000] + "...[已截断]"
                 
                 # 获取embedding
                 embedding = self.get_embedding(content)

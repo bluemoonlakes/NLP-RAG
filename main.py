@@ -8,13 +8,11 @@ def main():
 
     if not os.path.exists(VECTOR_DB_PATH):
         return
-    print('?')
     # 初始化RAG Agent
     agent = RAGAgent(model=MODEL_NAME)
 
     # 检查知识库
     count = agent.vector_store.get_collection_count()
-    print(count)
     if count == 0:
         return
 
