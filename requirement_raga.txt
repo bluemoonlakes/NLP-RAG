@@ -1,0 +1,6 @@
+ragas==0.1.8
+langchain-core==0.1.45
+langchain-community==0.0.34
+datasets
+pandas
+tqdm

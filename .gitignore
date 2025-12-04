@@ -1,0 +1,6 @@
+RAG/
+ragas_env/
+data/
+vector_db/
+llm_eval_results/
+__pycache__/
